@@ -1,0 +1,44 @@
+section {
+    width: 80%;
+    margin: auto;
+}
+.cont {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+.contact_details {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    padding: 20px 50px;
+}
+.contact_us {
+    border: 2px solid grey;
+    /* font-style: italic; */
+    
+}
+/* .contact_us h4 {
+    font-style: normal;
+} */
+.top_img {
+    min-height: 20vh;
+    background-position: top;
+}
+.icons a {
+    color: white;
+    font-size: 8px;
+    margin: 10px 20px 10px 0;
+}
+
+input, textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type='submit'] {
+    background-color: green;
+    color: white;
+}

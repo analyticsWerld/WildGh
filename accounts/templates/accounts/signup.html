@@ -1,0 +1,36 @@
+{% extends 'wildgh/base.html' %}
+
+{%load static%}
+{%block extra_css%}
+<link rel="stylesheet" href="{% static 'accounts/css/signup.css' %}">
+{%endblock%}
+
+{%block title%}
+<title>Sign Up! | Wild Ghana</title>
+{%endblock%}
+{% block content %}
+<div class="content" style="min-height: 50vh; padding-top: 180px">
+
+  <div class="form">
+      <form action="">
+        {%csrf_token%}
+          <div class="name">
+              Sign Up
+          </div>
+          <div class="">
+              <div class="">{{form.email}}</div> 
+              <div class="">{{form.password1}}</div> 
+              <div class="">{{form.password2}}</div> 
+              <div class="small-check">
+                  <div class=""><input type="checkbox" name="" id=""><span>Remember Me</span> </div><div class=""></div>  
+              </div>
+              <div class=""><input type="submit" value="LOGIN"></div> 
+              <div class="underfoot">Have an account? <a href=""> Log in</a></div>
+          </div>
+      </form>
+  </div>
+  <div class="space"></div>
+
+</div>
+
+{% endblock content %}

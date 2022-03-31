@@ -1,0 +1,175 @@
+{%extends 'wildgh/base.html'%}
+
+{%load static%}
+
+
+{%block site_description%}
+<meta name="description" content="Author: Werld Analytics,
+Site Description: Wild Ghana are expects in wildlife photography providing detailed mouth watering images that brings you close to nature.">
+{%endblock%}
+
+{%block extra_css%}
+<link rel="stylesheet" type="text/css" href="{% static 'wildgh/css/home.css' %}" />    
+{%endblock%}
+
+{%block title%}
+    <title>Wild Ghana | Home</title>
+{%endblock%}
+
+{%block content%}
+<div class="">
+  <!-- CAROUSEL HOME -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'wildgh/img/pangolin.jpg' %}" class="d-block w-100 size" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'wildgh/img/mountains.jpg' %}" class="d-block w-100 size" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'wildgh/img/grasshopper.jpg' %}" class="d-block w-100 size" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section class="about">
+    <div class="side-text">
+        We are <span>WILD GHANA!</span> <br>
+        A team of experts in <br>
+        wildlife photography. <br>
+        We do it wild!
+
+        <div class="button"><a class="but-empty" href="#">More ></a></div>
+    </div>
+    <div class="photographer">
+      <img src="{% static 'wildgh/img/photographer.JPG' %}" alt="" width="300" >
+    </div>
+</section>
+<section class="gallery">
+    <div class="gallery-header">
+        <div class="topic">
+            Our World Classed Gallery
+        </div> 
+        <div class="caption">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Corrupti minima, officia odio blanditiis obcaecati 
+            magnam beatae quod recusandae. sit amet consectetur adipisicing elit. 
+            Corrupti minima, officia odio blanditiis obcaecati 
+            magnam beatae quod recusandae.
+        </div>
+    </div>
+
+    <div class="albums">
+      {%for album in albums%}
+      <p>{{album.category}}</p>
+      <a class="img{{forloop.counter}}" href="#" style="background-image:url({{album.image_watermarked.url}})">
+        <div class="sheild">
+          <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+        </svg>Add to Cart</button> </div>
+      </a>
+      {%endfor%}  
+    </div>
+    
+<div class="button ta-center">
+  <a href="#" class="but-empty">Explore</a>
+  <!-- <a href="#" class="but-fill">Buy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+  </svg></a> -->
+</div>
+</section> 
+
+
+</div>
+
+<section>
+<div class="blog">
+<div class="topic">Read Our Blog</div>
+</div>
+
+<div class="blog-samples">
+
+<div class="sample">
+<div class="blog-image">
+  <img src="{% static 'wildgh/img/reed_frog.jpg' %}" width="250" height="250" alt="">
+</div>
+<div class="head">
+  The Village Frog
+</div>
+<div class="sub-head">
+  FEB 10TH, 2022 | <span>Mark Arthur</span>
+</div>
+<div class="description">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Quibusdam odio quam tempora odit maiores a obcaecati saepe 
+  modi culpa, veritatis illo voluptates assumenda ab 
+  exercitationem accusamus delectus quis architecto sequi 
+  aspernatur 
+</div>
+</div>
+
+<div class="sample">
+  <div class="blog-image">
+    <img src="{% static 'wildgh/img/reed_frog.jpg' %}" width="250" height="250" alt="">
+  </div>
+  
+  <div class="head">
+    The Village Frog
+  </div>
+  <div class="sub-head">
+    FEB 10TH, 2022 | <span>Mark Arthur</span>
+  </div>
+  <div class="description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Quibusdam odio quam tempora odit maiores a obcaecati saepe 
+    modi culpa, veritatis illo voluptates assumenda ab 
+    exercitationem accusamus delectus quis architecto sequi 
+    aspernatur 
+  </div>
+</div>
+
+
+<div class="sample">
+  <div class="blog-image">
+    <img src="{% static 'wildgh/img/reed_frog.jpg' %}" width="250" height="250" alt="">
+  </div>
+  <div class="head">
+    The Village Frog
+  </div>
+  <div class="sub-head">
+    FEB 10TH, 2022 | <span>Mark Arthur</span>
+  </div>
+  <div class="description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Quibusdam odio quam tempora odit maiores a obcaecati saepe 
+    modi culpa, veritatis illo voluptates assumenda ab 
+    exercitationem accusamus delectus quis architecto sequi 
+    aspernatur 
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+<section>
+<div class="quote-div" style="background-image: url('{%static 'wildgh/img/Bui National Park.jpg'%}')">
+<div class="quote-div-div">
+  <div class="q1">If you truly love Nature,</div> <div class="q2">you will find Beauty</div> <div class="q3">Everywhere</div> 
+ <span>Van Gogh</span>
+</div>
+
+</div>
+</section>        
+
+{%endblock%}
+

@@ -1,0 +1,60 @@
+{%extends 'wildgh/base.html'%}
+
+{%load static%}
+
+
+{%block site_description%}
+<meta name="description" content="Author: Werld Analytics,
+Site Description: Wild Ghana are expects in wildlife photography providing detailed mouth watering images that brings you close to nature.">
+{%endblock%}
+
+{%block extra_css%}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}" />    
+{%endblock%}
+
+{%block title%}
+    <title>Wild Ghana | Blog:{{blog.title}}</title>
+{%endblock%}
+
+{%block content%}
+<div style="min-height: 50vh; padding-top: 100px">
+    <section>
+      <div class="blog-head">
+          <div class="words">
+            <h2>The Village Frog</h2>
+            <h4>Author: Michael Akrasi <br> Date: 5th February 2022 <br> Editor: Dr. Caleb Boateng</h4>
+
+                <p>Image Description: A frog under crystals of water</p>
+          </div>
+          <div class="picture">
+            <img src="./images/Gallery/Wildlife/with/02_Togo toad.jpg" alt="">
+          </div>
+      </div>
+
+
+      <div class="paragraph">
+          <p>
+              <br> <br> <span></span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae dui pharetra, ornare metus ac, congue nisl. Ut interdum arcu id velit placerat sollicitudin. Sed pretium sollicitudin eros eu dictum. Aenean tellus dui, consequat id justo id, venenatis porttitor orci. Etiam rhoncus vehicula eros sed feugiat. Nullam sapien sem, tempus et dapibus vitae, hendrerit eu ligula. Donec turpis massa, dignissim eget cursus vel, viverra at lacus. Nullam nunc lacus, suscipit vitae luctus ac, faucibus et mi. Etiam pharetra tortor nunc, nec dignissim nulla ultricies sit amet. Aenean luctus felis tellus. Nunc maximus felis nunc, ut sollicitudin eros commodo vitae. Suspendisse sed dapibus nibh.
+            <br>
+            Phasellus tempor neque mi, nec tincidunt leo euismod eu. Phasellus blandit vehicula nisi id mollis. Suspendisse aliquam, odio id mollis venenatis, neque lectus auctor leo, in volutpat mauris leo ut odio. Sed mattis dictum ante sed molestie. Aliquam auctor accumsan elit, id finibus augue rhoncus in. Sed nec tempus nulla. Etiam malesuada urna erat, at sodales metus rutrum sit amet. Praesent luctus ornare eros eu ullamcorper.
+            <br>
+            Donec eleifend, purus dignissim ultrices porttitor, augue nulla porttitor augue, quis lacinia velit lectus nec lorem. Etiam hendrerit ligula id fringilla finibus. Sed tempor ornare arcu nec imperdiet. Duis molestie leo eget sem posuere, eget posuere mi faucibus. Nullam dapibus ligula vel est elementum egestas. Morbi bibendum est in sapien gravida, nec scelerisque libero viverra. Vivamus congue purus vulputate, sodales turpis ut, pretium odio. Sed quis tincidunt sapien.
+            <br>
+            Sed ut suscipit metus. Nunc ipsum nulla, varius at mi sit amet, pharetra pellentesque ex. Nunc et dui ac nunc vehicula imperdiet. Sed vel eros non dui viverra scelerisque. Maecenas porttitor, diam eu lobortis viverra, mauris ante consequat arcu, in ultrices magna eros ut magna. Nunc nec nunc ac enim condimentum fringilla eu a nulla. Cras vestibulum augue ipsum, vitae tempus ex tincidunt vel.
+            <br>
+            Sed suscipit tortor ut nulla auctor, a placerat nunc pulvinar. Nunc mollis placerat metus, id tempus nisi semper eget. Pellentesque consequat tempus nisl, vitae congue magna sodales in. Nunc sit amet mattis sapien. Aenean placerat nisl fringilla nisl auctor finibus. Etiam dignissim velit at urna interdum, in bibendum purus eleifend. Duis in purus nulla. Nunc cursus, diam non scelerisque eleifend, ligula lectus bibendum urna, sed cursus ligula nisi ac ligula. Aenean sit amet risus enim. Maecenas feugiat nisl a sodales imperdiet. Proin mi eros, interdum ac eros vitae, volutpat porta felis. Cras tempus, tellus sollicitudin ornare pharetra, eros odio pharetra nulla, bibendum convallis velit urna rutrum metus. Curabitur egestas risus et justo ornare aliquet. Sed sodales massa mauris. Nulla nec porta sapien. Vestibulum non est felis.
+            <br>
+            Suspendisse vel ligula quis urna blandit iaculis. Sed vehicula nec arcu porta efficitur. Nunc ac enim at sapien rhoncus aliquet. Vivamus tincidunt sem non accumsan finibus. Vivamus leo lectus, tincidunt id volutpat et, pretium sed odio. Donec molestie at sapien quis interdum. Praesent suscipit mauris at arcu fermentum, ac fermentum sapien cursus. Donec auctor odio turpis, in molestie magna convallis non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.
+            <br>
+            Sed ut suscipit metus. Nunc ipsum nulla, varius at mi sit amet, pharetra pellentesque ex. Nunc et dui ac nunc vehicula imperdiet. Sed vel eros non dui viverra scelerisque. Maecenas porttitor, diam eu lobortis viverra, mauris ante consequat arcu, in ultrices magna eros ut magna. Nunc nec nunc ac enim condimentum fringilla eu a nulla. Cras vestibulum augue ipsum, vitae tempus ex tincidunt vel.
+            <br>
+            Sed suscipit tortor ut nulla auctor, a placerat nunc pulvinar. Nunc mollis placerat metus, id tempus nisi semper eget. Pellentesque consequat tempus nisl, vitae congue magna sodales in. Nunc sit amet mattis sapien. Aenean placerat nisl fringilla nisl auctor finibus. Etiam dignissim velit at urna interdum, in bibendum purus eleifend. Duis in purus nulla. Nunc cursus, diam non scelerisque eleifend, ligula lectus bibendum urna, sed cursus ligula nisi ac ligula. Aenean sit amet risus enim. Maecenas feugiat nisl a sodales imperdiet. Proin mi eros, interdum ac eros vitae, volutpat porta felis. Cras tempus, tellus sollicitudin ornare pharetra, eros odio pharetra nulla, bibendum convallis velit urna rutrum metus. Curabitur egestas risus et justo ornare aliquet. Sed sodales massa mauris. Nulla nec porta sapien. Vestibulum non est felis.
+            <br>
+            Suspendisse vel ligula quis urna blandit iaculis. Sed vehicula nec arcu porta efficitur. Nunc ac enim at sapien rhoncus aliquet. Vivamus tincidunt sem non accumsan finibus. Vivamus leo lectus, tincidunt id volutpat et, pretium sed odio. Donec molestie at sapien quis interdum. Praesent suscipit mauris at arcu fermentum, ac fermentum sapien cursus. Donec auctor odio turpis, in molestie magna convallis non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.
+          
+        </p>
+      </div>
+    </section>
+ </div>
+{%endblock%}

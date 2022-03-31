@@ -1,0 +1,189 @@
+
+/* HOME */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse
+
+}
+.side-text {
+    font-size: 40px;
+    
+}
+.photographer {
+    width: 300px;
+    height: 380px;
+    background-color: whitesmoke;
+}
+
+.gallery-header{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.topic {
+    font-size: 40px;
+    text-align: center;
+
+}
+.caption {
+    font-size: 20px;
+    text-align: center;
+}
+
+.albums {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+                        'img1 img2 img3 img3'
+                        'img4 img5 img6 img7'
+                        'img4 img9 img9 img8';
+}
+
+.albums a {
+    width: 100%;
+    height: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.6s ease-in-out;
+    /* position: relative; */
+}
+.sheild {
+    display: none;
+    color: white;
+    transition: 0.6s;
+}
+.albums a:hover > .sheild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    
+}
+.sheild svg {
+    margin-right: 10px;
+}
+.sheild button {
+    
+    background: none;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    
+}
+.sheild button:hover {
+    padding: 7px;
+    font-size: large;
+}
+
+
+.img1 {
+    grid-area: img1;
+    /* background-image: url(./images/Gallery/Wildlife/with/06_Uniform\ reed\ frog_1.jpg) */
+}
+.img2 {
+    grid-area: img2;
+    /* background-image: url(./images/Gallery/Wildlife/with/10_Chameleon_Amedzofe.jpg) */
+}
+.img3 {
+    grid-area: img3;
+    /* background-image: url(./images/Gallery/Wildlife/with/05_Ghostly\ tree\ frog_Leptopelis\ spiritusnoctis1.jpg) */
+}
+.img4 {
+    grid-area: img4;
+    min-height: 31.5rem;
+    /* background-image: url(./images/Gallery/Places/with/04_Ote\ Waterfalla_Amedzofe.jpg) */
+}
+.img5 {
+    grid-area: img5;
+    /* background-image: url(./images/Gallery/Wildlife/with/11_Tree\ root_Amedzofe.jpg) */
+}
+.img6 {
+    grid-area: img6;
+    /* background-image: url(./images/Gallery/Places/with/06_Bobiri\ butterfly\ sanctuary.jpg) */
+}
+.img7 {
+    grid-area: img7;
+    /* background-image: url(./images/Gallery/Wildlife/with/08_Togo\ slippery\ frog\ toad.jpg) */
+}
+.img8 {
+    grid-area: img8;
+    /* background-image: url(./images/Gallery/Wildlife/with/02_Togo\ toad.jpg) */
+}
+.img9 {
+    grid-area: img9;
+    /* background-image: url(./images/Gallery/Places/with/02_Mt\ Gemi_upclose.jpg) */
+}
+
+.quote-div {
+    /* background-image: url(../img/Bui\ National\ Park.jpg); */
+    background-attachment: fixed;
+}
+
+.quote-div-div {
+    position: relative; 
+    font-size: 40px;
+    width: 50vw;
+    margin: auto;
+    color: black;
+    text-align: center;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.q1, .q2, .q3 {
+    background-color: white;
+    margin: 7px;
+    width: fit-content;
+    text-align: center;
+}
+.quote-div span {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.blog {
+    width: 90vw;
+    margin: auto;
+
+}
+.blog-samples {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+}
+.sample {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+.description {
+    text-align: center;
+}
+.head {
+    font-size: 25px;
+    margin: 3px;
+}
+.sub-head span {
+    font-style: italic;
+    
+    
+}
+.sub-head {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,70 @@
+/* ABOUT US */
+
+
+.side-text {
+    text-align: center;
+    font-size: 2rem;
+    max-width: 60vw;
+    margin: auto;
+}
+.stats {
+    display: flex;
+    font-size: 20px;
+    align-items:center;
+    justify-content: space-around;
+    width: 75vw;
+    margin: 100px auto;
+    text-align: center;
+
+}
+.stats span {
+    font-size: 3rem;
+}
+.pic-background {
+    height: 40vh;
+    width: 100%;
+    background-image: url(./images/Gallery/Places/with/03_Bui\ National\ Park.jpg);
+}
+
+.boss {
+    margin-top: 100px;
+}
+.ceo {
+    display: flex;
+    width: 90vw;
+    margin: 50px auto 100px auto;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.person{
+    padding: 0 50px;
+}
+.info {
+    flex: 1;
+    padding: 0 40px;
+}
+.section-header {
+    text-align: center;
+}
+.socials2 {
+    margin-top: 50px;
+}
+.socials2 a {
+    color: white;
+    margin: 10px;
+}
+
+.mission-sect {
+    background-color: rgb(73, 76, 78);
+    margin: 50px 0;
+    padding: 50px;
+}
+.missions {
+    display: flex;
+    width: 85vw;
+    margin: auto;
+}
+.mission, .obj {
+    max-width: 40vw;
+    font-size: 20px;
+}

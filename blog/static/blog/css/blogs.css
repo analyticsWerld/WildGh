@@ -1,0 +1,44 @@
+.topic {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.blog {
+    width: 90vw;
+    margin: 20px auto;
+    position: sticky;
+    top: 80px;
+    background-color: black;
+
+}
+.blog-samples {
+    display: grid;
+    width: 90vw;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 70px;
+}
+.sample {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+.description {
+    text-align: center;
+}
+.head {
+    font-size: 25px;
+    margin: 3px;
+}
+.sub-head span {
+    font-style: italic;
+    
+    
+}
+.sub-head {
+    margin-bottom: 10px;
+}
