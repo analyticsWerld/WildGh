@@ -1,0 +1,148 @@
+{%extends 'wildgh/base.html'%}
+
+{%load static%}
+
+
+{%block site_description%}
+<meta name="description" content="Author: Werld Analytics,
+Site Description: Wild Ghana are expects in wildlife photography providing detailed mouth watering images that brings you close to nature.">
+{%endblock%}
+
+{%block extra_css%}
+<link rel="stylesheet" type="text/css" href="{% static 'gallery/css/gallery.css' %}" />    
+{%endblock%}
+
+{%block title%}
+    <title>Wild Ghana | Gallery</title>
+{%endblock%}
+
+
+{%block content%}
+<div class="content" style="min-height: 50vh; padding-top: 100px">
+        
+    <section >
+        <h2>Explore Our Gallery</h2>
+        (click to view actual image beneath its category)
+        
+    </section>  
+    <hr>
+    <section>
+        <h3>Wildlife</h3>
+        This gallery deals with photography of our wildlife animals 
+
+        <div class="album">
+                
+            <div class="row">
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/01_Little commodore or Little pansy in copulation_Junonia sophia_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/02_Togo toad.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/03_Dragonfly_Tumu.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/04_Variegated Grasshopper_Bobiri Forest Reserve.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/05_Ghostly tree frog_Leptopelis spiritusnoctis1.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/06_Uniform reed frog_1.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/07_Togo slippery frog.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/08_Togo slippery frog toad.jpg"alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/09_Thonningia sanguinea.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/10_Chameleon_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Wildlife/with/11_Tree root_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="button add"><a href="">Add to Cart</a></div>
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%">
+                <div id="imgtext"></div>
+            </div>
+            
+        </div> 
+
+    </section>
+    
+    <section>
+        <h3>Places</h3>
+        This gallery deals with photography of our various places
+
+        <div class="album">
+                
+            <div class="row">
+                <div class="column">
+                <img src="./images/Gallery/Places/with/01_Amedzofe township & Mt Gemi-2.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Places/with/02_Mt Gemi_upclose.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Places/with/03_Bui National Park.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Places/with/04_Ote Waterfalla_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Places/with/05_Togo-Volta Highlands.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+                <div class="column">
+                <img src="./images/Gallery/Places/with/06_Bobiri butterfly sanctuary.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                </div>
+               
+            </div>
+            
+            <div class="container">
+                <div class="button add"><a href="">Add to Cart</a></div>
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg2" style="width:100%">
+                <div id="imgtext2"></div>
+            </div>
+            
+        </div> 
+
+    </section>
+
+    <section>
+        <h3>People</h3>
+        This gallery deals with photography of our various people
+
+        <div class="album">
+                
+            <div class="row">
+                <div class="column">
+                <img src="./images/Gallery/People/with/01_Caleb Ofori-Boateng.jpg" alt="Image Description" style="width:100%" onclick="myFunction3(this);">
+                </div>
+               
+               
+            </div>
+            
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg3" style="width:100%">
+                <div id="imgtext3"></div>
+            </div>
+            
+        </div> 
+
+    </section>
+        
+            
+            
+</div>
+{%endblock%}
