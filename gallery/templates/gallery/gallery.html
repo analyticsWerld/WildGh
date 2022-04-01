@@ -26,46 +26,21 @@ Site Description: Wild Ghana are expects in wildlife photography providing detai
         
     </section>  
     <hr>
+
+    {%for category in categories%}
+        {%if category == "Wildlife"%}
     <section>
-        <h3>Wildlife</h3>
+        <h3>{{category}}</h3>
         This gallery deals with photography of our wildlife animals 
 
         <div class="album">
                 
             <div class="row">
+                {%for life in Wildlife%}
                 <div class="column">
-                <img src="./images/Gallery/Wildlife/with/01_Little commodore or Little pansy in copulation_Junonia sophia_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
+                <img src="{{life.Watermarked.url}}" alt="{{life.description}}" style="width:100%" onclick="myFunction(this);">
                 </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/02_Togo toad.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/03_Dragonfly_Tumu.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/04_Variegated Grasshopper_Bobiri Forest Reserve.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/05_Ghostly tree frog_Leptopelis spiritusnoctis1.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/06_Uniform reed frog_1.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/07_Togo slippery frog.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/08_Togo slippery frog toad.jpg"alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/09_Thonningia sanguinea.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/10_Chameleon_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Wildlife/with/11_Tree root_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction(this);">
-                </div>
+                {%endfor%}
             </div>
             
             <div class="container">
@@ -78,32 +53,20 @@ Site Description: Wild Ghana are expects in wildlife photography providing detai
         </div> 
 
     </section>
-    
+    {%elif category == "Places"%}
     <section>
-        <h3>Places</h3>
+        <h3>{{category}}</h3>
         This gallery deals with photography of our various places
 
         <div class="album">
                 
             <div class="row">
+                {%for place in Places%}
                 <div class="column">
-                <img src="./images/Gallery/Places/with/01_Amedzofe township & Mt Gemi-2.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
+                <img src="{{place.Watermarked.url}}" alt="{{place.description}}" style="width:100%" onclick="myFunction2(this);">
                 </div>
-                <div class="column">
-                <img src="./images/Gallery/Places/with/02_Mt Gemi_upclose.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Places/with/03_Bui National Park.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Places/with/04_Ote Waterfalla_Amedzofe.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Places/with/05_Togo-Volta Highlands.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
-                </div>
-                <div class="column">
-                <img src="./images/Gallery/Places/with/06_Bobiri butterfly sanctuary.jpg" alt="Image Description" style="width:100%" onclick="myFunction2(this);">
-                </div>
+               {%endfor%}
+                
                
             </div>
             
@@ -117,18 +80,19 @@ Site Description: Wild Ghana are expects in wildlife photography providing detai
         </div> 
 
     </section>
-
+    {%elif category == "People"%}
     <section>
-        <h3>People</h3>
+        <h3>{{category}}</h3>
         This gallery deals with photography of our various people
 
         <div class="album">
                 
             <div class="row">
+                {%for person in People%}
                 <div class="column">
-                <img src="./images/Gallery/People/with/01_Caleb Ofori-Boateng.jpg" alt="Image Description" style="width:100%" onclick="myFunction3(this);">
+                <img src="{{person.Watermarked.url}}" alt="{{person.description}}" style="width:100%" onclick="myFunction3(this);">
                 </div>
-               
+               {%endfor%}
                
             </div>
             
@@ -141,8 +105,39 @@ Site Description: Wild Ghana are expects in wildlife photography providing detai
         </div> 
 
     </section>
-        
+    {%endif%}
+    {%endfor%} 
             
             
 </div>
+{%endblock%}
+    
+{%block extra_scripts%}
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+    <script>
+        function myFunction2(imgs) {
+            var expandImg = document.getElementById("expandedImg2");
+            var imgText = document.getElementById("imgtext2");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+    <script>
+        function myFunction3(imgs) {
+            var expandImg = document.getElementById("expandedImg3");
+            var imgText = document.getElementById("imgtext3");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
 {%endblock%}

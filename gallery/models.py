@@ -15,8 +15,8 @@ def path_no_watermark(instance, filename):
 class Gallery(models.Model):
 
     category = models.CharField(max_length=200)
-    image_watermarked = models.ImageField(name = "Watermarked Image",upload_to=path_watermarked,blank=True)
-    image_none = models.ImageField(name="Actual Image",upload_to=path_no_watermark,blank=True)
+    image_watermarked = models.ImageField(name = "Watermarked",upload_to=path_watermarked,blank=True)
+    image_none = models.ImageField(name="Actual",upload_to=path_no_watermark,blank=True)
     description = models.TextField(max_length=200,blank=True,null=True)
     price = models.IntegerField(blank=True,null=True,default=50)
 

@@ -8,6 +8,7 @@ def home(request):
     albums = random.sample(list(Gallery.objects.all()),9)
     blogs = Blog.objects.all()[:3]
     
+
     return render(request,"wildgh/home.html",{"albums":albums,"blogs":blogs})
 
 def about(request):

@@ -1,0 +1,28 @@
+section {
+    width: 90vw;
+    margin: auto;
+}
+/* .picture , .words {
+     flex: 1; 
+}
+.picture {
+     width: fit-content 
+} */
+.picture img {
+    max-width: 300px;
+}
+.blog-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.paragraph {
+    margin-bottom: 100px;
+}
+.paragraph p {
+    font-size: 20px;
+    
+}
+.paragraph span {
+    margin-left: 50px;
+}
