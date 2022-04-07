@@ -1,8 +1,11 @@
 import random
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import ContactForm
 from gallery.models import Gallery
 from blog.models import Blog
+from django.http import HttpResponse
+from django.core.mail import send_mail
+from .local_settings import EMAIL_HOST_USER as admin
 
 def home(request):
     albums = random.sample(list(Gallery.objects.all()),9)
@@ -15,5 +18,17 @@ def about(request):
     return render(request,"wildgh/about.html")
 
 def contact(request):
-    form =  ContactForm(request.POST)
-    return render(request,"wildgh/contact.html",{form:form})
+    if request.method == "POST":
+
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            sender = form.cleaned_data['email']
+            send_mail(subject,message,sender,admin)
+        
+    else:
+        form =  ContactForm()
+
+    return render(request,"wildgh/contact.html",{"form":form})

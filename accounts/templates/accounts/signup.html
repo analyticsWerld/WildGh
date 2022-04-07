@@ -18,9 +18,9 @@
               Sign Up
           </div>
           <div class="">
-              <div class="">{{form.email}}</div> 
-              <div class="">{{form.password1}}</div> 
-              <div class="">{{form.password2}}</div> 
+            {%for field in form%}
+            <div class="">{{field}}</div>
+        {%endfor%}
               <div class="small-check">
                   <div class=""><input type="checkbox" name="" id=""><span>Remember Me</span> </div><div class=""></div>  
               </div>
@@ -34,3 +34,7 @@
 </div>
 
 {% endblock content %}
+
+{%block footer%}
+
+{%endblock%}

@@ -66,5 +66,6 @@ class Accounts(AbstractUser):
 class Contact(models.Model):
     fullname = models.CharField(max_length=200,blank=True, null=True)
     email = models.EmailField(max_length=300,blank=True, null=True)
+    subject = models.EmailField(max_length=500,blank=True, null=True)
     message = models.CharField(max_length=700,blank=True, null=True)
 
