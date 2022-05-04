@@ -18,14 +18,14 @@
 </head>
 <body>
     <header id=header>
-        
+        <div class="logo-container">
+                <a href="{%url 'home'%}"><img src="{% static 'wildgh/img/logo_green.png' %}" alt="WILD GHANA" height="80px">
+        </div>
         <div class="small-width-nav">
             <div class="toggle-wrap" onclick="toggleMenu(this)">
               <span class="toggle-bar"></span>
             </div>
-              <div class="logo-container">
-                <a href="{%url 'home'%}"><img src="{% static 'wildgh/img/logo_green.png' %}" alt="WILD GHANA" height="80px">
-              </div>
+              
               <nav id="nav1" class="nav-div">
                   <ul class="nav-links">
                     <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
