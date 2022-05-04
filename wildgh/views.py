@@ -4,7 +4,7 @@ from .forms import ContactForm
 from gallery.models import Gallery
 from blog.models import Blog
 from django.http import HttpResponse
-from django.core.mail import send_mail
+from django.core.mail import send_mail,BadHeaderError
 from .local_settings import EMAIL_HOST_USER as admin
 
 def home(request):
@@ -26,9 +26,19 @@ def contact(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             sender = form.cleaned_data['email']
-            send_mail(subject,message,sender,admin)
+            try:
+                send_mail(subject,message,sender,[admin])
+            except BadHeaderError:
+                return HttpResponse("Invalid header found")
+            
+            return HttpResponse("success")
+            #return render(request,"wildgh/contact.html",{"form":form,"message":"Mail successfully sent."})
         
     else:
         form =  ContactForm()
 
     return render(request,"wildgh/contact.html",{"form":form})
+
+
+def success(request):
+    return HttpResponse('Mail successfully sent.')

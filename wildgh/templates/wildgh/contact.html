@@ -21,17 +21,23 @@ Site Description: Wild Ghana are expects in wildlife photography providing detai
 
 <div class="content" style="min-height: 50vh; padding-top: 100px">
     <section class="cont">
+        {%if message%}
+            {{message}}
+        {%endif%}
         <div class="mail_us">
             <h2>
                 Leave us a Message
             </h2>
             <div class="form">
-                {%for field in form%}
-                    {{field}}
-                    <br>
-                {%endfor%}
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {%for field in form%}
+                        {{field}}
+                        <br>
+                    {%endfor%}
             </div>
             <input type="submit" value="submit">
+        </form>
         </div>
         <div class="contact_us">
             <div class="top_img" style="background-image:url({%static 'wildgh/img/Bui National Park.jpg'%})">
